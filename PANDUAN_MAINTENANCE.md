@@ -12,14 +12,14 @@ File data profil ini tersimpan di format JSON terstruktur sehingga Anda bisa men
 Buka file `profile_data.json`, lalu edit objek `"candidate"`:
 ```json
 "candidate": {
-  "name": "Rehan Pratama",
-  "role": "Operator Produksi & Staff Manufaktur",
-  "location": "Kab. Bekasi, Jawa Barat",
+  "name": "Rayhan Hafizh",
+  "role": "Operator Produksi (Assembly & Packing)",
+  "location": "Serang Baru, Bekasi, Jawa Barat",
   "statusBadge": "Siap Bekerja",
-  "avatarUrl": "https://...",
+  "avatarUrl": "assets/foto_rpofile.jpeg",
   "aboutMe": "Tuliskan deskripsi Tentang Saya di sini...",
-  "whatsappNumber": "6281234567890",
-  "whatsappDefaultMessage": "Halo Rehan, kami tertarik dengan profil Anda"
+  "whatsappNumber": "6285695331098",
+  "whatsappDefaultMessage": "Halo Rayhan, kami tertarik dengan profil Anda"
 }
 ```
 

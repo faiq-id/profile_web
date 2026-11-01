@@ -143,23 +143,43 @@ class _PulseDotState extends State<PulseDot> with SingleTickerProviderStateMixin
 }
 
 /// Network image with a graceful fallback (e.g. when CORS blocks it on web).
+/// Also supports local bundled assets when [url] does not start with `http`
+/// (e.g. `assets/foto_rpofile.jpeg`).
 class SafeNetworkImage extends StatelessWidget {
   const SafeNetworkImage({
     super.key,
     required this.url,
     required this.fallbackIcon,
     this.fit = BoxFit.cover,
+    this.alignment = Alignment.center,
   });
 
   final String url;
   final IconData fallbackIcon;
   final BoxFit fit;
+  final Alignment alignment;
+
+  Widget _fallback() => Container(
+        color: AppColors.surfaceContainer,
+        alignment: Alignment.center,
+        child: Icon(fallbackIcon, color: AppColors.secondary, size: 36),
+      );
 
   @override
   Widget build(BuildContext context) {
+    if (!url.startsWith('http')) {
+      return Image.asset(
+        url,
+        fit: fit,
+        alignment: alignment,
+        errorBuilder: (context, error, stack) => _fallback(),
+      );
+    }
+
     return Image.network(
       url,
       fit: fit,
+      alignment: alignment,
       webHtmlElementStrategy: WebHtmlElementStrategy.fallback,
       loadingBuilder: (context, child, progress) {
         if (progress == null) return child;
@@ -173,11 +193,7 @@ class SafeNetworkImage extends StatelessWidget {
           ),
         );
       },
-      errorBuilder: (context, error, stack) => Container(
-        color: AppColors.surfaceContainer,
-        alignment: Alignment.center,
-        child: Icon(fallbackIcon, color: AppColors.secondary, size: 36),
-      ),
+      errorBuilder: (context, error, stack) => _fallback(),
     );
   }
 }

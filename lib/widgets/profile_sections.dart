@@ -56,9 +56,10 @@ class CandidateHeaderCard extends StatelessWidget {
         children: [
           // Avatar + status badge
           Padding(
-            padding: const EdgeInsets.only(bottom: AppSpace.sm),
+            padding: const EdgeInsets.only(bottom: AppSpace.md),
             child: Stack(
               clipBehavior: Clip.none,
+              alignment: Alignment.bottomCenter,
               children: [
                 Container(
                   width: 96,
@@ -73,46 +74,57 @@ class CandidateHeaderCard extends StatelessWidget {
                     child: SafeNetworkImage(
                       url: candidate.avatarUrl,
                       fallbackIcon: Icons.person,
+                      alignment: const Alignment(0, -0.55),
                     ),
                   ),
                 ),
                 Positioned(
-                  bottom: 0,
-                  right: -14,
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                    decoration: BoxDecoration(
-                      color: AppColors.surfaceContainerLowest,
-                      borderRadius: BorderRadius.circular(999),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color(0x1A000000),
-                          blurRadius: 3,
-                          offset: Offset(0, 1),
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const PulseDot(),
-                        const SizedBox(width: 4),
-                        Text(
-                          candidate.statusBadge,
-                          style: AppText.bodySm.copyWith(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w600,
-                            letterSpacing: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: -6,
+                  child: Center(
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 2,
+                      ),
+                      decoration: BoxDecoration(
+                        color: AppColors.surfaceContainerLowest,
+                        borderRadius: BorderRadius.circular(999),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0x1A000000),
+                            blurRadius: 3,
+                            offset: Offset(0, 1),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const PulseDot(),
+                          const SizedBox(width: 4),
+                          Text(
+                            candidate.statusBadge,
+                            style: AppText.bodySm.copyWith(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w600,
+                              letterSpacing: 0,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ],
             ),
           ),
-          Text(candidate.name, style: AppText.headlineSm, textAlign: TextAlign.center),
+          Text(
+            candidate.name,
+            style: AppText.headlineSm,
+            textAlign: TextAlign.center,
+          ),
           const SizedBox(height: 2),
           Text(
             candidate.role,
@@ -176,7 +188,9 @@ class _StatTile extends StatelessWidget {
         children: [
           Text(
             value,
-            style: AppText.titleSm.copyWith(color: valueColor ?? AppColors.onSurface),
+            style: AppText.titleSm.copyWith(
+              color: valueColor ?? AppColors.onSurface,
+            ),
             textAlign: TextAlign.center,
           ),
           Text(
@@ -204,11 +218,17 @@ class AboutSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SectionHeader(icon: Icons.badge_outlined, title: 'Tentang Saya'),
+          const SectionHeader(
+            icon: Icons.badge_outlined,
+            title: 'Tentang Saya',
+          ),
           const SizedBox(height: AppSpace.sm),
           Text(
             aboutMe,
-            style: AppText.bodyMd.copyWith(color: AppColors.secondary, height: 1.625),
+            style: AppText.bodyMd.copyWith(
+              color: AppColors.secondary,
+              height: 1.625,
+            ),
           ),
         ],
       ),
@@ -267,7 +287,10 @@ class SkillsSection extends StatelessWidget {
               children: [
                 for (final s in supportingCompetencies)
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 4,
+                    ),
                     decoration: BoxDecoration(
                       color: AppColors.surfaceContainerLow,
                       borderRadius: BorderRadius.circular(6),
@@ -315,7 +338,10 @@ class _SkillTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(title, style: AppText.titleSm),
-                Text(subtitle, style: AppText.bodySm.copyWith(color: AppColors.secondary)),
+                Text(
+                  subtitle,
+                  style: AppText.bodySm.copyWith(color: AppColors.secondary),
+                ),
               ],
             ),
           ),
@@ -323,7 +349,9 @@ class _SkillTile extends StatelessWidget {
           Pill(
             label: level,
             background: expert ? AppColors.greenBg : AppColors.surfaceContainer,
-            foreground: expert ? AppColors.greenText : AppColors.onSurfaceVariant,
+            foreground: expert
+                ? AppColors.greenText
+                : AppColors.onSurfaceVariant,
           ),
         ],
       ),
@@ -414,7 +442,9 @@ class _TimelineItem extends StatelessWidget {
                 Text(
                   item.period,
                   style: AppText.labelSm.copyWith(
-                    color: item.isCurrent ? AppColors.primary : AppColors.secondary,
+                    color: item.isCurrent
+                        ? AppColors.primary
+                        : AppColors.secondary,
                   ),
                 ),
                 if (item.isCurrent) ...[
@@ -433,11 +463,17 @@ class _TimelineItem extends StatelessWidget {
             const SizedBox(height: 4),
             Text(item.role, style: AppText.titleSm),
             const SizedBox(height: 4),
-            Text(item.company, style: AppText.labelMd.copyWith(color: AppColors.secondary)),
+            Text(
+              item.company,
+              style: AppText.labelMd.copyWith(color: AppColors.secondary),
+            ),
             const SizedBox(height: 8),
             Text(
               item.description,
-              style: AppText.bodySm.copyWith(color: AppColors.secondary, height: 1.625),
+              style: AppText.bodySm.copyWith(
+                color: AppColors.secondary,
+                height: 1.625,
+              ),
             ),
             if (item.tags.isNotEmpty) ...[
               const SizedBox(height: 8),
@@ -458,7 +494,7 @@ class _TimelineItem extends StatelessWidget {
 }
 
 // ---------------------------------------------------------------------------
-// 5. Sertifikasi Resmi
+// 5. Sertifikasi Resmi / Pendidikan Resmi
 // ---------------------------------------------------------------------------
 class CertificationSection extends StatelessWidget {
   const CertificationSection({super.key, required this.certification});
@@ -467,13 +503,14 @@ class CertificationSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final hasImage = certification.imageUrl.trim().isNotEmpty;
     return SectionCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SectionHeader(
-            icon: Icons.verified_outlined,
-            title: 'Sertifikasi Resmi',
+            icon: hasImage ? Icons.verified_outlined : Icons.school_outlined,
+            title: hasImage ? 'Sertifikasi Resmi' : 'Pendidikan Resmi',
             trailing: Pill(
               label: certification.badgeText,
               background: AppColors.greenBg,
@@ -489,32 +526,62 @@ class CertificationSection extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: AppSpace.sm + 4),
-          Container(
-            padding: const EdgeInsets.all(4),
-            decoration: BoxDecoration(
-              color: AppColors.surfaceContainerLow,
-              borderRadius: BorderRadius.circular(8),
-              boxShadow: shadowSm,
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(6),
-              child: SizedBox(
-                height: 176,
-                width: double.infinity,
-                child: SafeNetworkImage(
-                  url: certification.imageUrl,
-                  fallbackIcon: Icons.workspace_premium_outlined,
+          if (hasImage) ...[
+            const SizedBox(height: AppSpace.sm + 4),
+            Container(
+              padding: const EdgeInsets.all(4),
+              decoration: BoxDecoration(
+                color: AppColors.surfaceContainerLow,
+                borderRadius: BorderRadius.circular(8),
+                boxShadow: shadowSm,
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(6),
+                child: SizedBox(
+                  height: 176,
+                  width: double.infinity,
+                  child: SafeNetworkImage(
+                    url: certification.imageUrl,
+                    fallbackIcon: Icons.workspace_premium_outlined,
+                  ),
                 ),
               ),
             ),
-          ),
+          ],
           const SizedBox(height: AppSpace.sm + 4),
-          Text(certification.title, style: AppText.titleSm),
-          const SizedBox(height: 4),
-          Text(
-            certification.issuer,
-            style: AppText.bodySm.copyWith(color: AppColors.secondary),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              if (!hasImage) ...[
+                Container(
+                  width: 44,
+                  height: 44,
+                  decoration: BoxDecoration(
+                    color: AppColors.surfaceContainer,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: const Icon(
+                    Icons.school_outlined,
+                    size: 24,
+                    color: AppColors.primary,
+                  ),
+                ),
+                const SizedBox(width: 12),
+              ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(certification.title, style: AppText.titleSm),
+                    const SizedBox(height: 4),
+                    Text(
+                      certification.issuer,
+                      style: AppText.bodySm.copyWith(color: AppColors.secondary),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
           const SizedBox(height: 8),
           Row(
@@ -528,7 +595,11 @@ class CertificationSection extends StatelessWidget {
                   ),
                 ),
               ),
-              const Icon(Icons.verified_user_outlined, size: 18, color: AppColors.secondary),
+              Icon(
+                hasImage ? Icons.verified_user_outlined : Icons.school,
+                size: 18,
+                color: AppColors.secondary,
+              ),
             ],
           ),
         ],
@@ -546,8 +617,10 @@ class ActionButtons extends StatelessWidget {
   final CandidateInfo candidate;
 
   Future<void> _openWhatsApp() async {
-    final cleanPhone =
-        candidate.whatsappNumber.replaceAll(RegExp(r'[^0-9+]'), '');
+    final cleanPhone = candidate.whatsappNumber.replaceAll(
+      RegExp(r'[^0-9+]'),
+      '',
+    );
     final encodedMsg = Uri.encodeComponent(candidate.whatsappDefaultMessage);
     final rawUrl = 'https://wa.me/$cleanPhone?text=$encodedMsg';
     final uri = Uri.tryParse(rawUrl);
@@ -567,7 +640,9 @@ class ActionButtons extends StatelessWidget {
           style: FilledButton.styleFrom(
             backgroundColor: AppColors.primary,
             foregroundColor: AppColors.onPrimary,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
             textStyle: AppText.labelMd,
           ),
           icon: const Icon(Icons.chat_outlined, size: 19),

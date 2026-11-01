@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
           repository: context.read<ProfileRepository>(),
         ),
         child: MaterialApp(
-          title: 'Rehan Pratama — Profil & Bio',
+          title: 'Rayhan Hafizh — Profil & Portofolio',
           debugShowCheckedModeBanner: false,
           theme: buildAppTheme(),
           home: const ProfilePage(),
