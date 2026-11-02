@@ -1,11 +1,11 @@
 {
-    "name": "profile_web",
-    "short_name": "profile_web",
+    "name": "Rayhan Hafizh — Profil & Portofolio",
+    "short_name": "Rayhan H.",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#0E141B",
+    "theme_color": "#0E141B",
+    "description": "Profil Profesional & Portofolio Rayhan Hafizh",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

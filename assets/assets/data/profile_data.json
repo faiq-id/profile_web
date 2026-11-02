@@ -1,94 +1,113 @@
 {
   "candidate": {
-    "name": "Rehan Pratama",
-    "role": "Operator Produksi & Staff Manufaktur",
-    "location": "Kab. Bekasi, Jawa Barat",
+    "name": "Rayhan Hafizh",
+    "role": "Operator Produksi (Assembly & Packing)",
+    "location": "Serang Baru, Bekasi, Jawa Barat",
     "statusBadge": "Siap Bekerja",
-    "avatarUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCVabSOxALSWOQD8E71tZkb5gdYRmz-mvLSCf08YF97aKT5YC_2Pu4pKLXVNKd_TZV-FxINsRPZNIKb84x6dNy9KmJIDxhnTUuXstt-Eu8Sncw4wbQ7NJIDXyMYMdPQNMrYLgq2W2fnpJfKcgA73FdJzZ9Kt-LZKaejypurCdan7ER8Eiml3zVG34k4oULCOLPBhssYgkng7XmCx8-s0W-O2K79jRGFKLwPe46MCfYrl5HnKKAnyTJoUTVuLgPoxdNhrfMJymTY59uLcg",
-    "aboutMe": "Operator produksi berdedikasi tinggi dan teliti dengan pengalaman di industri manufaktur dan perakitan. Terbiasa bekerja dengan target output tinggi, mematuhi standar K3 (Keselamatan dan Kesehatan Kerja), 5R/5S, serta siap bekerja dengan sistem shift kerja maupun lembur terjadwal.",
-    "whatsappNumber": "6281234567890",
-    "whatsappDefaultMessage": "Halo Rehan, kami tertarik dengan profil Anda",
-    "cvPdfUrl": "https://example.com/cv-rehan-pratama.pdf"
+    "avatarUrl": "assets/foto_rpofile.jpeg",
+    "aboutMe": "Lulusan SMK jurusan Teknik Elektronika Industri dari SMK Ananda Mitra Industri Deltamas dengan keterampilan praktis dalam perakitan komponen elektronik, dan memiliki pengalaman kerja di industri manufaktur & packaging. Memiliki disiplin tinggi, cepat beradaptasi dengan alur kerja pabrik, serta berkomitmen menerapkan prinsip 5R dan standar K3 di area kerja.",
+    "whatsappNumber": "6285695331098",
+    "whatsappDefaultMessage": "Halo Rayhan, kami tertarik dengan profil Anda"
   },
   "stats": {
     "pengalaman": "3+ Tahun",
-    "kesiapan": "Shift 1,2,3",
+    "kesiapan": "Shift 1, 2, 3",
     "statusKerja": "Aktif"
   },
   "skills": [
     {
-      "iconName": "verified",
-      "title": "Disiplin Kerja, K3 & 5R/5S",
-      "subtitle": "Standar K3 Manufaktur",
+      "iconName": "precision_manufacturing",
+      "title": "Perakitan Komponen Elektronika",
+      "subtitle": "Assembly & Komponen Tambahan",
       "level": "Tingkat Mahir",
       "isExpert": true
     },
     {
-      "iconName": "precision_manufacturing",
-      "title": "Pengoperasian Mesin & Perakitan",
-      "subtitle": "Lini Fabrikasi & Assembly",
+      "iconName": "verified",
+      "title": "Penerapan K3 & 5R di Area Kerja",
+      "subtitle": "Standar Keselamatan Pabrik",
       "level": "Tingkat Mahir",
       "isExpert": true
     },
     {
       "iconName": "fact_check",
-      "title": "Quality Control & Sortir Produk",
-      "subtitle": "Inspeksi Standar Mutu",
+      "title": "SOP Produksi & Sortir Kualitas",
+      "subtitle": "Inspeksi Visual & Mutu Barang",
       "level": "Kompeten",
       "isExpert": false
     }
   ],
   "supportingCompetencies": [
-    "Standar K3",
-    "Penerapan 5R/5S",
-    "Quality Control (QC)",
-    "SOP Manufaktur",
-    "Packing & Packaging",
-    "Bongkar Muat"
+    "Pengemasan & Packing",
+    "Pengoperasian Mesin Potong",
+    "Penanganan Material",
+    "Pencatatan Output",
+    "Penyusunan Barang",
+    "Problem Solving",
+    "Microsoft Office Dasar"
   ],
   "experiences": [
     {
-      "period": "2026 — Sekarang",
-      "role": "Kenek Mobil Truk / Logistik Distribusi",
-      "company": "PT Pangan Lestari",
-      "description": "Bertanggung jawab dalam proses bongkar muat barang logistik pangan, memastikan keselamatan & keutuhan pengiriman ke outlet/tujuan, serta membantu pengemudi dalam operasional rute distribusi.",
+      "period": "Mei 2026 — Sekarang",
+      "role": "Operator Packing (Pekerja Harian)",
+      "company": "PT. Fortuna Indah",
+      "description": "Melakukan proses pengemasan barang jadi, pencatatan dan perhitungan output harian secara teliti, serta melakukan penataan dan penyusunan barang sesuai standar operasional.",
       "tags": [
-        "Distribusi Barang",
-        "Logistik"
+        "Operator Packing",
+        "Pencatatan Output",
+        "Penyusunan Barang"
       ],
       "isCurrent": true,
       "dotColorHex": "#000000"
     },
     {
-      "period": "2024 — 2025",
-      "role": "Operator Produksi",
-      "company": "PT Daechang",
-      "description": "Mengoperasikan mesin dan peralatan lini produksi manufaktur, memastikan standar target output tercapai, menjaga kualitas hasil cetakan/komponen, serta menerapkan standar K3 dan 5R di area kerja.",
+      "period": "Mar 2025 — Nov 2025",
+      "role": "Helper Produksi (Pekerja Harian)",
+      "company": "PT. Yuto Packaging Technology Indonesia",
+      "description": "Mempersiapkan bahan baku kertas untuk lini produksi, membantu operasional mesin potong, melakukan pengemasan dan penataan hasil potongan, serta menjaga kerapian area kerja sesuai prinsip 5R & K3.",
       "tags": [
-        "Operasional Mesin",
-        "Quality Inspection"
+        "Helper Produksi",
+        "Mesin Potong",
+        "Packaging",
+        "Penerapan 5R & K3"
       ],
       "isCurrent": false,
       "dotColorHex": "#515F74"
     },
     {
-      "period": "2023 — 2024",
-      "role": "Helper Produksi & Packaging",
-      "company": "PT Yuto Packaging Indonesia",
-      "description": "Membantu operasional pengemasan dan penyortiran barang jadi, menyiapkan material kemasan di lini produksi, serta mendukung kelancaran alur packing sesuai instruksi kerja.",
+      "period": "Okt 2023 — Jun 2024",
+      "role": "Helper Produksi (Pekerja Harian)",
+      "company": "PT. Etika Manufacturing Indonesia",
+      "description": "Mempersiapkan bahan baku dan material, membantu proses operasional lini produksi, melakukan pengangkatan dan pemindahan barang secara aman, serta menjaga kebersihan dan kerapian area kerja.",
       "tags": [
-        "Helper Packaging",
-        "Sortir Material"
+        "Helper Produksi",
+        "Material Handling",
+        "Operasional Produksi",
+        "Kebersihan Area"
       ],
       "isCurrent": false,
       "dotColorHex": "#76777D"
+    },
+    {
+      "period": "Nov 2022 — Mei 2023",
+      "role": "Operator Assembly (Magang)",
+      "company": "PT. Surya Technology Industri",
+      "description": "Melakukan pembersihan sisa cetakan komponen, pemeriksaan kualitas visual secara teliti, pemasangan komponen tambahan pada lini perakitan, dan pengemasan akhir (packing).",
+      "tags": [
+        "Operator Assembly",
+        "Inspeksi Visual",
+        "Pemasangan Komponen",
+        "Packing"
+      ],
+      "isCurrent": false,
+      "dotColorHex": "#9E9EA4"
     }
   ],
   "certification": {
-    "title": "Sertifikasi Kompetensi K3 & Operasional Manufaktur",
-    "issuer": "Lembaga Sertifikasi Profesi (LSP) / BNSP & Kemenaker",
-    "regNumber": "No. Reg: BNSP-MAN-2024-8842",
-    "badgeText": "Resmi & Valid",
-    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBtM-Rnvr0U3xPe470Tio1WpmYZbkIPQDQMc49cK5vYDK1r3hBVpUy5LTI_x9K7uuhruHsjwBY9PaadeY6Rr8BeyU35a188MoePYL_qGq2DnNR6iTYBTleBtZmZ1AjFwH2hP_Eg_-19sHtIBt2MMqIZkE-BH_DRKRPKWgIZePq-oHvFFnniv1PvkNiGc8kPYjizjHX4oRuaOLNjyDPjrttkmiUnjQ4DnV_9WNIWEIwVmhkOltDZXf8pdvTVbhyx9CrsrE2I5ffws7TAag"
+    "title": "Teknik Elektronika Industri",
+    "issuer": "SMK Ananda Mitra Industri Deltamas",
+    "regNumber": "Tahun Kelulusan: 2018 — 2021",
+    "badgeText": "Lulusan Resmi",
+    "imageUrl": ""
   }
 }
